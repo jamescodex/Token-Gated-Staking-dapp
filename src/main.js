@@ -205,7 +205,7 @@ document
 
 document.querySelector("#withdrawBTN").addEventListener("click", async (e) => {
   let addressOfToken =  document.getElementById("address").value;
-  let amountToWithdraw = new BigNumber(document.getElementById("amountToStake").value)
+  let amountToWithdraw = new BigNumber(document.getElementById("amountToWithdraw").value)
   .shiftedBy(ERC20_DECIMALS)
   .toString()
   console.log(addressOfToken, amountToWithdraw)
