@@ -18,15 +18,17 @@ contract Stakemii{
     
     //constant rate of return on the staked used to calculate interest
     uint constant rate = 3854;
-
-     // Factor for interest calculation
-    uint256 constant factor = 1e11;
-
+    
     //Adding owner address
     address owner;
 
     //Amount Staked
     uint stakeNumber;
+
+     // Factor for interest calculation
+    uint256 constant factor = 1e11;
+
+    
 
      //Addresses for stakeable currencies
     address constant cUSDAddress = 0x874069Fa1Eb16D44d622F2e0Ca25eeA172369bC1;
@@ -47,11 +49,11 @@ contract Stakemii{
 
 
      /**
-     * @notice  . Struct that stores staking info;
-     * @param   staker  . Address of the staker
-     * @param   tokenStaked  . Token address of the token staked
-     * @param   amountStaked  . Amount staked
-     * @param   timeStaked  . Time of stake
+     * @notice  Struct that stores staking info;
+     * @param   staker Address of the staker
+     * @param   tokenStaked Token address of the token staked
+     * @param   amountStaked Amount staked
+     * @param   timeStaked Time of stake
      */
     struct stakeInfo{
         address staker;
