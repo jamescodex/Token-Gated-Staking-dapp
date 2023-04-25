@@ -28,8 +28,6 @@ contract Stakemii{
      // Factor for interest calculation
     uint256 constant factor = 1e11;
 
-    
-
      //Addresses for stakeable currencies
     address constant cUSDAddress = 0x874069Fa1Eb16D44d622F2e0Ca25eeA172369bC1;
     address constant CELOAddress = 0xF194afDf50B03e69Bd7D057c1Aa9e10c9954E4C9;
@@ -46,8 +44,6 @@ contract Stakemii{
     constructor(){
         owner = msg.sender;
     }
-
-
      /**
      * @notice  Struct that stores staking info;
      * @param   staker Address of the staker
@@ -81,7 +77,6 @@ contract Stakemii{
         require(msg.sender == owner, "not owner");
         _;
     }
-
 
     mapping(address => mapping(address => stakeInfo)) public usersStake;
     mapping(address => address[]) public tokensAddress;
@@ -128,7 +123,6 @@ contract Stakemii{
        emit stakedSuccesful(_tokenAddress, _amount);
     }
 
-
     /**
      * @dev     . A function to withdraw stake
      * @param   _tokenAddress  . The Address of the token to be withdraw
@@ -163,8 +157,7 @@ contract Stakemii{
              interest /=  factor;
         }
         return interest;
-    }
-    
+    } 
     
      /**
      * @dev     . A view function to show interest gotten
